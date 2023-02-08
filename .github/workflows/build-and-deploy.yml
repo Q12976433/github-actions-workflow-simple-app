@@ -18,11 +18,11 @@ jobs:
         uses: Azure/docker-login@v1
         with:
           # Container registry username
-          username: # default is 
+          username: first11
           # Container registry password
-          password: # default is 
+          password: u+BuOp49QAUyWmsTIo6Yy4BdKvtrq2HJyaPP3onAW6+ACRA1yaPq
           # Container registry server url
-          login-server: # default is https://index.docker.io/v1/
+          login-server: first11.azurecr.io
     
       - name: Build and push
         uses: docker/build-push-action@v4
