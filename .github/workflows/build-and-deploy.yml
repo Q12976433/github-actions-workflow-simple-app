@@ -28,8 +28,8 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: user/app:latest
-          file:./Dockerfile
+          tags: first11.azurecr.io/hello-world.app
+          file: ./Dockerfile
       
   deployToAKS:
     runs-on: ubuntu-latest
