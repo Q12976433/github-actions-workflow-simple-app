@@ -28,9 +28,9 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-        push: true
-        tags: first11.azurecr.io/hello-world-app:${{github.sha}}
-        file: ./Dockerfile
+          push: true
+          tags: first11.azurecr.io/hello-world-app:${{github.sha}}
+          file: ./Dockerfile
 
 
       
