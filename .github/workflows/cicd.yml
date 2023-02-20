@@ -17,12 +17,12 @@ jobs:
       - name: Azure Container Registry Login
         uses: Azure/docker-login@v1
         with:
-        # Container registry username
-        username: first11
-        # Container registry password
-        password: u+BuOp49QAUyWmsTIo6Yy4BdKvtrq2HJyaPP3onAW6+ACRA1yaPq
-        # Container registry server url
-        login-server: first11.azurecr.io
+          # Container registry username
+          username: first11
+          # Container registry password
+          password: u+BuOp49QAUyWmsTIo6Yy4BdKvtrq2HJyaPP3onAW6+ACRA1yaPq
+          # Container registry server url
+          login-server: first11.azurecr.io
 
       
       - name: Build and push
@@ -35,9 +35,9 @@ jobs:
 
       
   deployToAKS:
-    runs-on:ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      -run: echo " bye"
+      - run: echo "bye"
     
     
     
