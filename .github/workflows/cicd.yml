@@ -1,1 +1,52 @@
+name: CICD
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  push:
+    branches:
+      - "master"
+      
+      
+jobs:
+  buildImage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout respository code
+        uses: actions/checkout@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+        
+      - name: Azure Container Registry Login
+        uses: Azure/docker-login@v1
+        with:
+        # Container registry username
+        username: first11
+        # Container registry password
+        password: u+BuOp49QAUyWmsTIo6Yy4BdKvtrq2HJyaPP3onAW6+ACRA1yaPq
+        # Container registry server url
+        login-server: first11.azurecr.io
 
+      
+      - name: Build and push
+        uses: docker/build-push-action@v4
+        with:
+        push: true
+        tags: first11.azurecr.io/hello-world-app:${{github.sha}}
+        file: ./Dockerfile
+
+
+      
+  deployToAKS:
+    runs-on ubuntu-latest
+    steps:
+      -run: echo " bye"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
