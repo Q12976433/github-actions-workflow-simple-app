@@ -5,7 +5,6 @@ on:
     branches:
       - "master"
       
-      
 jobs:
   buildImage:
     runs-on: ubuntu-latest
@@ -30,13 +29,13 @@ jobs:
         uses: docker/build-push-action@v4
         with:
         push: true
-        tags: first11.azurecr.io/hello-world-app:${{github.sha}}
-        file: ./Dockerfile
+          tags: first11.azurecr.io/hello-world-app:${{github.sha}}
+          file: ./Dockerfile
 
 
       
   deployToAKS:
-    runs-on ubuntu-latest
+    runs-on:ubuntu-latest
     steps:
       -run: echo " bye"
     
