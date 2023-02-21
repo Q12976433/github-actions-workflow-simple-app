@@ -80,8 +80,9 @@ jobs:
         with:
           action: deploy
           manifests: 
-            ./kubernetes/hello-world-deployment.yaml
-            ./kubernetes/hello-world-service.yaml
+            
+            kubernetes/hello-world-service.yaml
+            kubernetes/hello-world-deployment.yaml
           images:
             first11.azurecr.io/hello-world-app:${{github.sha}}
             
