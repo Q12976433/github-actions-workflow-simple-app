@@ -87,16 +87,15 @@ jobs:
           output: 
             hello-world-deployment.yaml
           
-        
-
 
       - name: Deploys app
         uses: Azure/k8s-deploy@v4
         with:
           action: deploy
           manifests: |
-            kubernetes/hello-world-service.yaml
             hello-world-deployment.yaml
+            kubernetes/hello-world-service.yaml
+            
           images: |
             first11.azurecr.io/hello-world-app:${{github.sha}}
             
