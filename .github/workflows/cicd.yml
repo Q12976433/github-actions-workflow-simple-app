@@ -95,7 +95,6 @@ jobs:
         with:
           action: deploy
           manifests: |
-    
             kubernetes/hello-world-service.yaml
             hello-world-deployment.yaml
           images: |
