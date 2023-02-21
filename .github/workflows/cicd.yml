@@ -74,6 +74,18 @@ jobs:
           subscription: '27825376-be3a-4328-b6eb-b2fc74363e63'
           admin: "false"
           use-kubelogin: "true"
+          
+      - name: envsubst-action
+        uses: danielr1996/envsubst-action@1.1.0
+        env:
+          MONGODB_URI: mongodb://first0012:DkoG2ompW6Ec8vR9QL2LiYsIjnMUEsmRWeicfJtnVKHNdD53hu4jR5pYAUoKg5FrnHxKoGnmSRUNACDbZeKAOA==@first0012.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@first0012@
+          CONTAINER_NAME: hello-world-app:${{github.sha}}
+          AZURE_CONTAINER_REGISTRY: first11.azurecr.io
+        with:
+          input: kubernetes/hello-world-deployment.yaml
+          output: hello-world-deployment.yaml
+          
+        
 
 
       - name: Deploys app
