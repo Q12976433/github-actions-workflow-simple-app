@@ -80,7 +80,8 @@ jobs:
         with:
           action: deploy
           manifests: 
-            
+            1.yaml
+            2.yaml
             kubernetes/hello-world-service.yaml
             kubernetes/hello-world-deployment.yaml
           images:
