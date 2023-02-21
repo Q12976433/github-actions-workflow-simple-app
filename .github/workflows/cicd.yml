@@ -64,31 +64,13 @@ jobs:
           kubelogin-version: 'v0.0.25'
       
       - name: Kubernetes Set Context
-        uses: Azure/k8s-set-context@v3.0
+        uses: Azure/aks-set-context@v3.0
         with:
-          # Acceptable values: generic or arc
-          cluster-type:  generic
-          # Acceptable values: kubeconfig or service-account or service-principal
-          method: kubeconfig
-          # Contents of kubeconfig file
-          kubeconfig:
-            description: 'Contents of the kubeconfig file'
-          # If your kubeconfig has multiple contexts, use this field to use a specific context, otherwise the default one would be chosen
-          context: # optional
-          # Cluster Url
-          k8s-url: # optional
-          # Service account secret (run kubectl get serviceaccounts <service-account-name> -o yaml and copy the service-account-secret-name)
-          k8s-secret: # optional
-          # Token extracted from the secret of service account (should be base 64 decoded)
-          token: # optional
-         
+    
           # Azure resource group name
           resource-group: 'demo_group'
           # Azure connected cluster name
-          cluster-name: 'first
-          
-          
-          '
+          cluster-name: 'first'
           subscription: '27825376-be3a-4328-b6eb-b2fc74363e63'
           admin: "false"
           use-kubelogin: "true"
