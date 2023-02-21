@@ -70,7 +70,7 @@ jobs:
           # Azure resource group name
           resource-group: 'demo_group'
           # Azure connected cluster name
-          cluster-name: 'first11'
+          cluster-name: 'firstK8'
           subscription: '27825376-be3a-4328-b6eb-b2fc74363e63'
           admin: "false"
           use-kubelogin: "true"
