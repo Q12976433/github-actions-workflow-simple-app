@@ -82,8 +82,10 @@ jobs:
           CONTAINER_NAME: hello-world-app:${{github.sha}}
           AZURE_CONTAINER_REGISTRY: first11.azurecr.io
         with:
-          input: kubernetes/hello-world-deployment.yaml
-          output: hello-world-deployment.yaml
+          input: 
+            kubernetes/hello-world-deployment.yaml
+          output: 
+            hello-world-deployment.yaml
           
         
 
@@ -95,7 +97,7 @@ jobs:
           manifests: |
     
             kubernetes/hello-world-service.yaml
-            kubernetes/hello-world-deployment.yaml
+            hello-world-deployment.yaml
           images: |
             first11.azurecr.io/hello-world-app:${{github.sha}}
             
