@@ -74,17 +74,17 @@ jobs:
           subscription: '27825376-be3a-4328-b6eb-b2fc74363e63'
           admin: "false"
           use-kubelogin: "true"
-      
+
+
       - name: Deploys app
         uses: Azure/k8s-deploy@v4
         with:
           action: deploy
-          manifests: 
-            1.yaml
-            2.yaml
+          manifests: |
+    
             kubernetes/hello-world-service.yaml
             kubernetes/hello-world-deployment.yaml
-          images:
+          images: |
             first11.azurecr.io/hello-world-app:${{github.sha}}
             
 
