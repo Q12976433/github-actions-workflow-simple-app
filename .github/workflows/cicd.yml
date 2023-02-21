@@ -71,7 +71,8 @@ jobs:
           # Acceptable values: kubeconfig or service-account or service-principal
           method: kubeconfig
           # Contents of kubeconfig file
-          kubeconfig: # optional
+          kubeconfig:
+            description: 'Contents of the kubeconfig file'
           # If your kubeconfig has multiple contexts, use this field to use a specific context, otherwise the default one would be chosen
           context: # optional
           # Cluster Url
